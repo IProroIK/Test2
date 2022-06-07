@@ -12,18 +12,29 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _distance;
     [SerializeField] private bool _canJump;
 
+    [SerializeField] private TrajectoryRenderer _trajectoryRenderer;
+    [SerializeField] private Camera _mainCamera;
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _mousePositionStart = Input.mousePosition;
-
+            _mousePositionStart = (Input.mousePosition);
+            _trajectoryRenderer.EnableLineRender();
+        }
+        if(Input.GetMouseButton(0))
+        {
+            _mousePositionEnd = (Input.mousePosition);
+            _distance = Distance(_mousePositionStart, _mousePositionEnd);
+            _forceToZAxics = _distance * 0.02f;
+            _trajectoryRenderer.ShowTrajectory(new Vector3(0, 0, 0), new Vector3(0, _forceToYAxics, _forceToZAxics));
         }
         if (Input.GetMouseButtonUp(0))
         {
-            _mousePositionEnd = Input.mousePosition;
+            _trajectoryRenderer.DisableLineRender();
+            _mousePositionEnd = (Input.mousePosition);
             _distance = Distance(_mousePositionStart, _mousePositionEnd);
-            _forceToZAxics = _distance;
+            _forceToZAxics = _distance * 0.02f;
             Jump(_canJump);
             
         }
@@ -38,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canJump == true)
         {
-            _rigidbody.AddForce(new Vector3(0, _forceToYAxics, _forceToZAxics), ForceMode.Impulse);
+            _rigidbody.AddForce(new Vector3(0, _forceToYAxics, _forceToZAxics), ForceMode.VelocityChange);
             _canJump = false;
         }
     }
