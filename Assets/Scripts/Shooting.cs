@@ -5,8 +5,12 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     [SerializeField] private GameObject _shootLightEffect;
+    [SerializeField] private int _damage = 1;
+    private Camera _mainCamera;
+
     private void Awake()
     {
+        _mainCamera = Camera.main;
         _shootLightEffect.SetActive(false);
     }
 
@@ -16,6 +20,18 @@ public class Shooting : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             StartCoroutine(ShootEffect());
+
+            Ray ray = new Ray();
+            ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
+            Debug.DrawRay(ray.origin, ray.direction * 100f, Color.yellow);
+            RaycastHit hit;
+            if(Physics.Raycast(ray, out hit ))
+            {
+                if(hit.transform.TryGetComponent(out Meteor meteor))
+                {
+                    meteor.TakeDamage(_damage);
+                }
+            }
         }
     }
 
