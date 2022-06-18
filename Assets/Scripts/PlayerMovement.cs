@@ -23,19 +23,26 @@ public class PlayerMovement : MonoBehaviour
             _trajectoryRenderer.EnableLineRender();
         }
         if(Input.GetMouseButton(0))
-        {
+        { 
             _mousePositionEnd = (Input.mousePosition);
             _distance = Distance(_mousePositionStart, _mousePositionEnd);
-            _forceToZAxics = _distance * 0.02f;
-            _trajectoryRenderer.ShowTrajectory(new Vector3(0, 0, 0), new Vector3(0, _forceToYAxics, _forceToZAxics));
+            if (_distance >= 5f)
+            {
+                _forceToZAxics = _distance * 0.02f;
+                _trajectoryRenderer.ShowTrajectory(new Vector3(0, 0, 0), new Vector3(0, _forceToYAxics, _forceToZAxics));
+            }
+            //Turn(_mousePositionStart, Input.mousePosition);
         }
         if (Input.GetMouseButtonUp(0))
         {
             _trajectoryRenderer.DisableLineRender();
             _mousePositionEnd = (Input.mousePosition);
             _distance = Distance(_mousePositionStart, _mousePositionEnd);
-            _forceToZAxics = _distance * 0.02f;
-            Jump(_canJump);
+            if (_distance >= 5f)
+            {
+                _forceToZAxics = _distance * 0.02f;
+                Jump(_canJump);
+            }
             
         }
     }
@@ -44,6 +51,13 @@ public class PlayerMovement : MonoBehaviour
     {
         _canJump = true;
     }
+
+
+    /*private void Turn(Vector3 mousePosStart, Vector3 mousePosCurrent)
+    {
+        float yTurnAngele = Distance(mousePosStart, mousePosCurrent);
+        this.transform.eulerAngles = new Vector3(0, yTurnAngele, 0);
+    }*/
 
     private void Jump(bool canJump)
     {

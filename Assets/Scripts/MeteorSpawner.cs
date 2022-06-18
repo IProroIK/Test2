@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class MeteorSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private List<GameObject> _meteors;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.transform.tag == "Player")
+        {
+            for (int i = 0; i < _meteors.Count; i++)
+            {
+                _meteors[i].SetActive(true);
+            }
+        }
     }
 }

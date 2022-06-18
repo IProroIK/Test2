@@ -19,8 +19,6 @@ public class Shooting : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            StartCoroutine(ShootEffect());
-
             Ray ray = new Ray();
             ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
             Debug.DrawRay(ray.origin, ray.direction * 100f, Color.yellow);
@@ -29,6 +27,7 @@ public class Shooting : MonoBehaviour
             {
                 if(hit.transform.TryGetComponent(out Meteor meteor))
                 {
+                    StartCoroutine(ShootEffect());
                     meteor.TakeDamage(_damage);
                 }
             }
