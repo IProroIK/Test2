@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class DeathZone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public event Action OnDeth;
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(other.TryGetComponent(out PlayerMovement playerMovement))
+        {
+            OnDeth?.Invoke();
+            SpeshilForKuna.fuckingShit += 1;
+        }
     }
 }
