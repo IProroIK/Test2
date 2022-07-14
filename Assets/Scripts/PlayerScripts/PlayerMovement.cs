@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _forceToYAxics;
     [SerializeField] private float _forceToZAxics;
     [SerializeField] private float _distance;
+    [SerializeField] private float _maxJumpDistance;
     [SerializeField] private bool _canJump;
 
     [SerializeField] private TrajectoryRenderer _trajectoryRenderer;
@@ -29,9 +30,12 @@ public class PlayerMovement : MonoBehaviour
             if (_distance >= 5f)
             {
                 _forceToZAxics = _distance * 0.02f;
+                if (_distance > _maxJumpDistance)
+                {
+                    _forceToZAxics = _maxJumpDistance * 0.02f;
+                }
                 _trajectoryRenderer.ShowTrajectory(new Vector3(0, 0, 0), new Vector3(0, _forceToYAxics, _forceToZAxics));
             }
-            //Turn(_mousePositionStart, Input.mousePosition);
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -41,8 +45,13 @@ public class PlayerMovement : MonoBehaviour
             if (_distance >= 50f)
             {
                 _forceToZAxics = _distance * 0.02f;
+                if(_distance > _maxJumpDistance)
+                {
+                    _forceToZAxics = _maxJumpDistance * 0.02f;
+                }
                 Jump(_canJump);
             }
+
             
         }
     }
@@ -57,12 +66,6 @@ public class PlayerMovement : MonoBehaviour
     {
         OutPlatform(collision);
     }
-
-    /*private void Turn(Vector3 mousePosStart, Vector3 mousePosCurrent)
-    {
-        float yTurnAngele = Distance(mousePosStart, mousePosCurrent);
-        this.transform.eulerAngles = new Vector3(0, yTurnAngele, 0);
-    }*/
 
     private void Jump(bool canJump)
     {

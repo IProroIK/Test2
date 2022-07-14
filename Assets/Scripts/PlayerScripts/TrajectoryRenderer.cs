@@ -29,6 +29,7 @@ public class TrajectoryRenderer : MonoBehaviour
     public void DisableLineRender()
     {
         _lineRenderer.gameObject.SetActive(false);
+        _lineRenderer.positionCount = 0;
     }
 
     public void EnableLineRender()
