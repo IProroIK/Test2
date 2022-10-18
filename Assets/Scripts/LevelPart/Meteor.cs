@@ -8,7 +8,7 @@ public class Meteor : MonoBehaviour
     [SerializeField] private Transform _player;
     [SerializeField] private float _speed = 1f;
     [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private int _heathPoint = 1;
+    [SerializeField] private float _heathPoint = 1;
 
     private void OnEnable()
     {

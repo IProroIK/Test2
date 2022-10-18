@@ -8,7 +8,7 @@ public class MeteorSpawner : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Player")
+        if (collision.transform.tag == "Player" && _meteors.Count > 0)
         {
             for (int i = 0; i < _meteors.Count; i++)
             {

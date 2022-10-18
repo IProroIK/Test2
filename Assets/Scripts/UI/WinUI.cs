@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using System.Diagnostics;
 
 public class WinUI : MonoBehaviour
 {
@@ -22,12 +22,22 @@ public class WinUI : MonoBehaviour
     }
     private void LoadNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex == 29)
+        {
+            PlayerPrefs.SetInt("LVL", 6);
+            SceneManager.LoadScene(6);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     private void ActiveWinUI()
     {
         _winUI.gameObject.SetActive(true);
+        UnityEngine.Debug.Log(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     private void ReloadLevel()

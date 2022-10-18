@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd9e72c85430d34e97fa68db6860361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _crystalValue: 1
+  _crystalValue: 50
   _playerInfo: {fileID: 0}
   _pickUPSound: {fileID: 4594080750902109729}
   _mesh: {fileID: 23000012914220848}

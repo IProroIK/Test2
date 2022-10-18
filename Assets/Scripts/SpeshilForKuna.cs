@@ -12,6 +12,7 @@ public class SpeshilForKuna : MonoBehaviour
         if(Kunalevel)
         {
             Kunatext.text += fuckingShit.ToString();
+            Debug.Log("a");
         }
     }
 }

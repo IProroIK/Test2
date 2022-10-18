@@ -21,4 +21,5 @@ public class Crystal : MonoBehaviour
             Destroy(gameObject, 1f);
         }
     }
+
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 490774}
   - component: {fileID: 3326692}
   - component: {fileID: 2314670}
+  - component: {fileID: 3295238546742967277}
   m_Layer: 0
   m_Name: glowing_rock_orange_7
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3295238546742967277
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145250}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.5216436, y: 6.02445, z: 6.0048523}
+  m_Center: {x: 0.06777036, y: -1.1756284e-19, z: -0.03905189}
 --- !u!1 &151398
 GameObject:
   m_ObjectHideFlags: 0

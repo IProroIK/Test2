@@ -10,7 +10,7 @@ Material:
   m_Name: M_WM_SF_Wp01_b
   m_Shader: {fileID: 4800000, guid: 5e5eca56e1993e741b41ac9c687d01a5, type: 3}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
-  m_LightmapFlags: 1
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1

@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 492748}
   - component: {fileID: 3325112}
   - component: {fileID: 2394434}
+  - component: {fileID: -6689352241643989540}
+  - component: {fileID: 6478949817049802122}
+  - component: {fileID: 8643768988209165743}
+  - component: {fileID: 6378058583405155785}
   m_Layer: 0
   m_Name: Rock 2
   m_TagString: Untagged
@@ -81,3 +85,63 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-6689352241643989540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc4aece2e1a9d94fb0a93f8833952cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyEffectsPrefab: {fileID: 0}
+  _player: {fileID: 0}
+  _speed: 3
+  _rigidbody: {fileID: 6378058583405155785}
+  _heathPoint: 1
+--- !u!135 &6478949817049802122
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100138}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.8046231
+  m_Center: {x: 0, y: 0, z: -0.06273633}
+--- !u!114 &8643768988209165743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd824243bf185e49b78a0519d164cda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationObject: {fileID: 492748}
+  _rotationSpeed: {x: 0.9, y: 0.1, z: 0.5}
+--- !u!54 &6378058583405155785
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100138}
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

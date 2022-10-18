@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4268597916284530}
   - component: {fileID: 95340733316770424}
-  - component: {fileID: 143350241100547368}
   - component: {fileID: 114551384804589004}
   m_Layer: 0
   m_Name: Stylized Astronaut
@@ -177,24 +176,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &143350241100547368
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147752367711628}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.24
-  m_Radius: 0.07
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.125, z: -0.01}
 --- !u!114 &114551384804589004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,9 +516,9 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bd5105e1f39844b4daded70961d0174f, type: 2}
+  - {fileID: 2100000, guid: b59b3c6da7b8f4b4a8a3be21165af1dc, type: 2}
   - {fileID: 2100000, guid: 06eb4e637b7ef614e9265f48c542664b, type: 2}
-  - {fileID: 2100000, guid: d2c8f925eb40c4748811efdd803f25c6, type: 2}
+  - {fileID: 2100000, guid: b841528412b951f48a81a9037f2b594b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

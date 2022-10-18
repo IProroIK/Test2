@@ -5,8 +5,8 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     [SerializeField] private GameObject _shootLightEffect;
-    [SerializeField] private int _damage = 1;
     [SerializeField] private AudioSource _shootSound;
+    [SerializeField] private PlayerInfo _playerInfo;
     private Camera _mainCamera;
 
     private void Awake()
@@ -34,7 +34,7 @@ public class Shooting : MonoBehaviour
                 if (hit.transform.TryGetComponent(out Meteor meteor))
                 {
                     StartCoroutine(ShootEffect());
-                    meteor.TakeDamage(_damage);
+                    meteor.TakeDamage((int)_playerInfo.damage);
                 }
             }
         }
