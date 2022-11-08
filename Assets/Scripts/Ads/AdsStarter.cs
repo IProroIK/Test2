@@ -8,7 +8,7 @@ public class AdsStarter : MonoBehaviour
     [SerializeField] private DeathZone _deathZone;
     [SerializeField] private Win _win;
 
-    private void Awake()
+    private void Start()
     {
         _win.OnGetToPlanet += _ads.ShowAd;
         _deathZone.OnDeth += DethAdsShow;

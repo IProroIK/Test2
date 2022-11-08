@@ -400,7 +400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905872630599996765, guid: 721afce9293d09d4981ed64055244f71, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 80
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 3905872630599996765, guid: 721afce9293d09d4981ed64055244f71, type: 3}
       propertyPath: m_LocalRotation.w
@@ -436,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 535371669}
     - target: {fileID: 8391247932802488792, guid: 721afce9293d09d4981ed64055244f71, type: 3}
       propertyPath: _distanceZ
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 721afce9293d09d4981ed64055244f71, type: 3}
@@ -559,7 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 651388517659608605, guid: cc75a22e86b24a3459bf38ac40eeb103, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 132
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 651388517659608605, guid: cc75a22e86b24a3459bf38ac40eeb103, type: 3}
       propertyPath: m_LocalRotation.w
@@ -853,8 +853,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1750072938828002075, guid: cc75a22e86b24a3459bf38ac40eeb103, type: 3}
+      propertyPath: _moveTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750072938828002075, guid: cc75a22e86b24a3459bf38ac40eeb103, type: 3}
       propertyPath: _dictanceX
       value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750072938828002075, guid: cc75a22e86b24a3459bf38ac40eeb103, type: 3}
+      propertyPath: _timeOffcetToMove
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8007850525168185566, guid: cc75a22e86b24a3459bf38ac40eeb103, type: 3}
       propertyPath: _playerInfo
@@ -1436,6 +1444,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1750072938828002075, guid: cc75a22e86b24a3459bf38ac40eeb103, type: 3}
+      propertyPath: _moveTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750072938828002075, guid: cc75a22e86b24a3459bf38ac40eeb103, type: 3}
+      propertyPath: _timeOffcetToMove
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8007850525168185566, guid: cc75a22e86b24a3459bf38ac40eeb103, type: 3}
       propertyPath: _playerInfo
       value: 
@@ -1490,7 +1506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4673635969536592, guid: 8190b5bccf212934d8144b97e6904c4b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 179
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 4673635969536592, guid: 8190b5bccf212934d8144b97e6904c4b, type: 3}
       propertyPath: m_LocalRotation.w

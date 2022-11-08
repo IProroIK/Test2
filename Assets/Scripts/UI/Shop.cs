@@ -45,7 +45,7 @@ public class Shop : MonoBehaviour
     }
     private void Start()
     {
-        if (PlayerPrefs.HasKey("JumpUpgradeCost"))
+        if (PlayerPrefs.HasKey("JumpUpgradeCost") || PlayerPrefs.HasKey("CurrentSkinIndex"))
         {
             LoadData();
 
